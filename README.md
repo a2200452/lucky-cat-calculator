@@ -1,45 +1,53 @@
-# 招財貓的理財筆記｜買房 vs 股息試算
+# 🐱 招財貓的理財筆記｜買房 vs 股息試算
 
-純靜態網站（3 個檔案），用 GitHub Pages 免費上線，全程 0 元。
+**手上有一筆錢，該拿去買房，還是讓股息替你工作？**
+輸入你的數字，30 秒看出兩條路 30 年後的資產差多少。
 
-## 一、上線（約 5 分鐘）
-1. 登入 github.com，右上角 + → **New repository**
-   - Repository name：`lucky-cat-calculator`（想要最短網址可取名 `你的帳號.github.io`）
-   - 選 **Public**（免費帳號的 GitHub Pages 需要公開 repo）
-   - 勾 **Add a README file** 不用勾，直接 Create
-2. 進入 repo → **Add file → Upload files**，把 `index.html`、`config.js`、`README.md` 一起拖進去 → **Commit changes**
-3. **Settings → Pages**：Source 選 **Deploy from a branch**，Branch 選 `main`、資料夾 `/ (root)` → **Save**
-4. 等 1–2 分鐘，頁面上方會出現網址：`https://你的帳號.github.io/lucky-cat-calculator/`（或 `https://你的帳號.github.io/`）
+👉 **立即試算：https://a2200452.github.io/lucky-cat-calculator/**
 
-## 二、開啟數據追蹤（全部免費，兩個可擇一或都用）
-只需要編輯 `config.js`（在 GitHub 點檔案 → 鉛筆圖示 → 貼上 → Commit）。
+---
 
-**A. Cloudflare Web Analytics（看流量、來源、裝置；免 cookie）**
-1. cloudflare.com 免費註冊 → Analytics & Logs → **Web Analytics** → **Add a site**
-2. Hostname 填 `你的帳號.github.io` → 複製 token
-3. 貼進 `config.js` 的 `CF_TOKEN: '這裡'`
+## 這個工具適合你，如果你正在……
+- 猶豫要不要買房，又怕買了之後每月被貸款壓得喘不過氣
+- 手上有一筆自備款，不確定放房子還是放 ETF 比較好
+- 想知道「買房出租」每個月到底是賺錢還是倒貼
+- 想用數字，而不是感覺，做人生大決定
 
-**B. Google Analytics 4（看按鈕與行為）**
-1. analytics.google.com 建立資源 → 資料串流 → 網站，網址填你的 github.io 網址
-2. 複製 `G-` 開頭的衡量 ID，貼進 `GA_ID: '這裡'`
-3. 事件會自動送出（約 24 小時後出現在報表）：
-
-| 事件名稱 | 意思 |
+## 你會看到什麼
+| 項目 | 說明 |
 |---|---|
-| `calculate_click` | 按了「更新試算結果」 |
-| `edit_input`（field） | 第一次改了哪個欄位 |
-| `calc_result`（winner、years） | 停止輸入後的結果：etf / house / tie |
-| `toggle_advanced` | 展開或收合進階設定 |
-| `reset` | 按了重設 |
-| `dm_click` | 點「聊聊我的方案」→ 進 IG 私訊（最重要的轉換） |
-| `ig_profile_click` | 點「追蹤更多理財小筆記」 |
+| **30 年後資產差距** | 買房路徑與高股息 ETF 路徑，最後誰的資產比較多、差多少 |
+| **買房出租** | 期末房屋價值、總自備款、貸款金額、每月房貸 |
+| **高股息 ETF** | 同樣一筆本金投入 ETF，期末複利資產、每月需要補多少錢 |
+| **每月現金流** | 租金收入、房屋雜支，以及每月實際是賺還是倒貼 |
+| **核貸提醒** | 填入月薪後，會提示每月房貸占月薪比例是否過高 |
 
-建議到 GA4 → 管理 → 事件，把 `dm_click` 標成 **關鍵事件**，就能直接看到導流到私訊的人數。
+## 怎麼用（3 步驟）
+1. 填你的**月薪**和想買的**房價**（沒填的欄位，會自動用預設值計算）
+2. 想更精準，展開「進階成本設定」，調整利率、租金、稅費、裝潢等
+3. 數字一改，結果立刻更新，往下看**方案比較**和**30 年後資產差距**
 
-## 三、隱私
-- 不會傳送任何輸入的金額，只記錄「有沒有操作、哪邊勝出、點了哪個按鈕」
-- 瀏覽器開啟「不要追蹤」時，完全不載入統計
-- 兩個設定都留空 = 完全不追蹤
+## 為什麼值得試試
+- ✅ **免註冊、免下載**，打開網頁就能用
+- ✅ **所有數字都能自己改**，用你的真實情況算
+- ✅ **不會上傳你填的任何金額**，計算都在你自己的手機或電腦上完成
+- ✅ 手機、電腦都好用，深色模式也支援
 
-## 四、之後更新
-直接在 GitHub 重新上傳同名檔案覆蓋，1–2 分鐘後網站就會更新，網址不變。
+## 重要說明
+這是幫你**比較、思考**的工具，不是預測，也不構成投資建議。試算假設股息持續再投入、房屋出租不中斷，且未計入空置、交易稅與 ETF 價格波動。預設值（房價年增 2.5%、股息率 6%、租金率 2.5% 等）是情境假設，建議你自己調整、多試幾組。
+
+## 想看更多理財小筆記？
+理財也能可愛又有趣，用插畫陪你變有錢。
+📷 追蹤 IG：[@lucky_cat_lifestyle](https://www.instagram.com/lucky_cat_lifestyle/)
+💬 想聊聊你的方案、開始落地：[直接私訊招財貓](https://ig.me/m/lucky_cat_lifestyle)
+
+---
+
+<details>
+<summary>給站長：更新網站與開啟數據追蹤</summary>
+
+- **更新內容**：重新上傳同名的 `index.html` 覆蓋即可，網址不變。
+- **數據追蹤（選填、免費）**：編輯 `config.js`，填入 Cloudflare Web Analytics 的 `CF_TOKEN` 或 Google Analytics 4 的 `GA_ID`。兩個都留空 = 完全不追蹤。
+- 追蹤事件：`calculate_click`、`edit_input`、`calc_result`、`toggle_advanced`、`reset`、`dm_click`（點私訊）、`ig_profile_click`（點粉專）。不會傳送任何輸入的金額。
+
+</details>
